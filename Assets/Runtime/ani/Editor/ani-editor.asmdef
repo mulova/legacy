@@ -1,10 +1,10 @@
 {
     "name": "ani-editor",
     "references": [
+        "ani",
         "mulova.commons",
         "comunity",
-        "comunity-editor",
-        "ani"
+        "comunity-editor"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [
