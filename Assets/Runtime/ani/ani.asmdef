@@ -1,0 +1,15 @@
+{
+    "name": "ani",
+    "references": [
+        "comunity",
+        "mulova.commons"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

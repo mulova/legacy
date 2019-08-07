@@ -1,0 +1,14 @@
+
+=== Wed Aug  7 20:34:35 2019
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were added:
+  com.unity.analytics@3.2.2
+  com.unity.purchasing@2.0.3
+  com.unity.ads@2.0.8
+  com.unity.textmeshpro@1.4.1
+  com.unity.collab-proxy@1.2.15
+The following packages were removed:
+  com.mulova.commons@file:../../commons/Assets
