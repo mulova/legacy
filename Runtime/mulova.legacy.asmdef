@@ -1,0 +1,16 @@
+{
+    "name": "mulova.legacy",
+    "references": [
+        "mulova.commons",
+        "mulova.unicore",
+        "mulova.comunity"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
