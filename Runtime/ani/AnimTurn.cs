@@ -5,6 +5,7 @@ using mulova.commons;
 using mulova.comunity;
 using UnityEngine.Ex;
 using System.Ex;
+using System.Collections.Generic.Ex;
 
 namespace ani {
 	public class AnimTurn : SeqTurn {
@@ -39,7 +40,7 @@ namespace ani {
 		}
 		
 		public void Play(Action callback) {
-			if (clipNames.IsNotEmpty()) {
+			if (!clipNames.IsEmpty()) {
 				this.callback = callback;
 				anim.gameObject.SetActive(true);
 //				anim.AddOneShotCallback(OnComplete);

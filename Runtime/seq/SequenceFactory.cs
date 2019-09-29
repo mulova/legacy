@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Generic.Ex;
 using mulova.commons;
 
 namespace mulova.comunity {
@@ -26,7 +27,7 @@ namespace mulova.comunity {
 
 		public void Dispose(string id) {
 			List<Seq> slot = seqs[id];
-			if (slot.IsNotEmpty()) {
+			if (!slot.IsEmpty()) {
 				foreach (Seq s in slot) {
 					s.Stop();
 				}

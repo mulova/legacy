@@ -229,10 +229,10 @@ namespace mulova.audio
                     OnVoidEvent(evt);
                 } else
                 {
-                    if (stack.NotEmpty())
+                    if (stack.Empty())
                     {
                         stack.Pop();
-                        if (stack.NotEmpty())
+                        if (stack.Empty())
                         {
                             OnVoidEvent(stack.Peek());
                         } else

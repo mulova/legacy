@@ -8,9 +8,9 @@
         "mulova.unicore.editor",
         "mulova.comunity.editor",
         "mulova.builder",
-        "reorderablelist"
+        "reorderablelist",
+        "mulova.prebuild"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [
         "Editor"
     ],
@@ -19,5 +19,6 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": []
+    "defineConstraints": [],
+    "versionDefines": []
 }

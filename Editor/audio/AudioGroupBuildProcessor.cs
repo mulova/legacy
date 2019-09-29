@@ -49,7 +49,7 @@ namespace mulova.audio
                     local.Remove(a.path);
                 }
             }
-            if (local.IsNotEmpty())
+            if (!local.IsEmpty())
             {
                 AddErrorFormat("Missing clip data {0} in {1}", local.Join(","), g.csv.GetEditorPath());
             }

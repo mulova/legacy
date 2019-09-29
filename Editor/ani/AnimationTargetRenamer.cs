@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Ex;
 /// <summary>
 /// Animation target renamer.
 /// This script allows animation curves to be moved from one target to another.
@@ -116,7 +117,7 @@ namespace ani
             }
             
             scrollPos = EditorGUILayout.BeginScrollView (scrollPos);
-            if (clips.IsNotEmpty()) {
+            if (!clips.IsEmpty()) {
                 if (EditorGUILayoutUtil.Popup("Clip", ref clip, clips)) {
                     InitClip(clip);
                 }
