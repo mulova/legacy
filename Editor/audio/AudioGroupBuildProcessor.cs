@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Generic.Ex;
 using System.IO;
-using mulova.build;
 using mulova.commons;
 using mulova.comunity;
+using mulova.preprocess;
 using mulova.unicore;
 using UnityEditor;
 using UnityEngine;
@@ -43,7 +43,7 @@ namespace mulova.audio
             {
                 if (!local.Contains(a.path))
                 {
-                    AddErrorFormat("Missing clip '{0}', Check if filename is upper case.", a.path);
+                    log.LogFormat("Missing clip '{0}', Check if filename is upper case.", a.path);
                 } else
                 {
                     local.Remove(a.path);
@@ -51,7 +51,7 @@ namespace mulova.audio
             }
             if (!local.IsEmpty())
             {
-                AddErrorFormat("Missing clip data {0} in {1}", local.Join(","), g.csv.GetEditorPath());
+                log.LogFormat("Missing clip data {0} in {1}", local.Join(","), g.csv.GetEditorPath());
             }
         }
 
