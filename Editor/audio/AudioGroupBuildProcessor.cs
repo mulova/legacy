@@ -12,16 +12,16 @@ namespace mulova.audio
 {
     public class AudioGroupBuildProcessor : ComponentBuildProcess
     {
-        protected override void VerifyComponent(Component comp)
+        protected override void Verify(Component comp)
         {
             FindMissingAudioClips(comp as AudioGroup);
         }
 
-        protected override void PreprocessComponent(Component comp)
+        protected override void Preprocess(Component comp)
         {
         }
 
-        protected override void PreprocessOver(Component c)
+        protected override void Postprocess(Component c)
         {
         }
 
