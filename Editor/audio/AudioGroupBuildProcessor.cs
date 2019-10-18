@@ -43,7 +43,7 @@ namespace mulova.audio
             {
                 if (!local.Contains(a.path))
                 {
-                    log.LogFormat("Missing clip '{0}', Check if filename is upper case.", a.path);
+                    log.Log(LogType.Error, string.Format("Missing clip '{0}', Check if filename is upper case.", a.path), null, g);
                 } else
                 {
                     local.Remove(a.path);
@@ -51,7 +51,7 @@ namespace mulova.audio
             }
             if (!local.IsEmpty())
             {
-                log.LogFormat("Missing clip data {0} in {1}", local.Join(","), g.csv.GetEditorPath());
+                log.Log(LogType.Error, string.Format("Missing clip data {0} in {1}", local.Join(","), g.csv.GetEditorPath()), null, g);
             }
         }
 
