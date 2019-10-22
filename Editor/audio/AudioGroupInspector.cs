@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using mulova.commons;
 using mulova.comunity;
+using mulova.i18n;
 using mulova.unicore;
 using UnityEditor;
 using UnityEngine;

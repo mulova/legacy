@@ -1,6 +1,6 @@
-﻿using System.Text;
-using mulova.commons;
-using mulova.comunity;
+﻿using System;
+using System.Text;
+using mulova.i18n;
 
 namespace mulova.audio
 {
@@ -13,6 +13,11 @@ namespace mulova.audio
         protected override string GetKey(AudioClipData row)
         {
             return row.key;
+        }
+
+        protected override void LoadBytes(string path, Action<byte[]> callback)
+        {
+            throw new NotImplementedException();
         }
     }
 

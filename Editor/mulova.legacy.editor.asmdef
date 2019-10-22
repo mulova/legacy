@@ -9,7 +9,8 @@
         "mulova.comunity.editor",
         "mulova.builder",
         "reorderablelist",
-        "mulova.prebuild"
+        "mulova.prebuild",
+        "mulova.i18n"
     ],
     "includePlatforms": [
         "Editor"
@@ -20,5 +21,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }

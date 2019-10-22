@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 using mulova.comunity;
 
@@ -89,7 +89,7 @@ namespace mulova.audio
             {
                 return;
             }
-//            log.Info("Stop {0}", current.key);
+//            log.Debug("Stop {0}", current.key);
             source.Stop();
             current = NULL;
         }

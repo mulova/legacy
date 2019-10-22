@@ -11,12 +11,13 @@ using System.Diagnostics;
 using mulova.commons;
 using ani;
 using System.Ex;
+using ILogger = mulova.commons.ILogger;
 
 namespace UnityEngine.Ex
 {
     public static class AnimationEx {
 	    private static WeakHashSet<AnimationClip> registeredClips = new WeakHashSet<AnimationClip>();
-        public static readonly Loggerx log = LogManager.GetLogger(typeof(Animation));
+        public static readonly mulova.commons.ILogger log = LogManager.GetLogger(typeof(Animation));
 
 	    public static void PlayIgnoreScale( this Animation animation, AnimationClip clip, Action onComplete = null)
 	    {

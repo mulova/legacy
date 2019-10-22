@@ -1,4 +1,4 @@
-#if FULL
+﻿#if FULL
 //----------------------------------------------
 // Unity3D common libraries and editor tools
 // License: The MIT License ( http://opensource.org/licenses/MIT )
@@ -13,7 +13,7 @@ using System.Text;
 namespace mulova.comunity {
 	public class RSA : IDisposable
 	{
-		public static readonly Loggerx log = LogManager.GetLogger(typeof(RSA));
+		public static readonly ILogger log = LogManager.GetLogger(typeof(RSA));
 		private UnicodeEncoding converter = new UnicodeEncoding();
 		private RSACryptoServiceProvider rsa;
 		private RSAParameters encKey;

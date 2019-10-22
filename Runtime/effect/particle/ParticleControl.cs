@@ -111,7 +111,7 @@ namespace mulova.effect
 				s.Play();
 			}
 			timePassed = 0;
-			log.Info("Play Particle {0}", name);
+			log.Debug("Play Particle {0}", name);
 		}
 
 		private void InitModule()

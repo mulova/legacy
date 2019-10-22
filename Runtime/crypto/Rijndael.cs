@@ -1,4 +1,4 @@
-#if FULL
+﻿#if FULL
 //----------------------------------------------
 // Unity3D common libraries and editor tools
 // License: The MIT License ( http://opensource.org/licenses/MIT )
@@ -14,7 +14,7 @@ using System.IO;
 namespace mulova.comunity {
 	public class Rijndael : IDisposable
 	{
-		public static readonly Loggerx log = LogManager.GetLogger(typeof(Rijndael));
+		public static readonly ILogger log = LogManager.GetLogger(typeof(Rijndael));
 		private UnicodeEncoding converter = new UnicodeEncoding();
 		private RijndaelManaged crypto;
 		private static readonly Rijndael instance = new Rijndael();

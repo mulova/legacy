@@ -4,6 +4,7 @@ using System;
 using mulova.commons;
 using UnityEngine.Ex;
 using System.Ex;
+using ILogger = mulova.commons.ILogger;
 
 namespace mulova.comunity
 {
@@ -17,7 +18,7 @@ namespace mulova.comunity
         private bool skip;
         private int animLayer;
         private readonly ConcurrentTurn NO_SKIP = new ConcurrentTurn(new ActionTurn(null));
-        public static readonly Loggerx log = LogManager.GetLogger(typeof(Seq));
+        public static readonly ILogger log = LogManager.GetLogger(typeof(Seq));
         private TimerControl timer;
         private bool errorTolerant;
 
@@ -42,7 +43,7 @@ namespace mulova.comunity
                 Add(new ActionTurn(act));
             } else
             {
-                log.Info("Null argument");
+                log.Debug("Null argument");
             }
         }
 
@@ -57,7 +58,7 @@ namespace mulova.comunity
                 tail.Add(turn);
             } else
             {
-                log.Info("Null argument");
+                log.Debug("Null argument");
             }
         }
 

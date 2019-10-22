@@ -7,6 +7,7 @@ using mulova.preprocess;
 using mulova.unicore;
 using UnityEditor;
 using UnityEngine;
+using LogType = UnityEngine.LogType;
 
 namespace mulova.audio
 {

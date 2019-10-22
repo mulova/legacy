@@ -3,11 +3,12 @@ using System;
 using System.Collections;
 using mulova.commons;
 using System.Ex;
+using ILogger = mulova.commons.ILogger;
 
 [RequireComponent(typeof(Animation))]
 public class IgnoreTimeScale : MonoBehaviour
 {
-    public static readonly Loggerx log = LogManager.GetLogger(typeof(Animation));
+    public static readonly ILogger log = LogManager.GetLogger(typeof(Animation));
 	public bool ignorePause = true;
 	private Animation anim;
 

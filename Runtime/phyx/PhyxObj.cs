@@ -5,6 +5,7 @@ using System.Ex;
 
 using UnityEngine;
 using UnityEngine.Ex;
+using ILogger = mulova.commons.ILogger;
 
 namespace mulova.comunity
 {
@@ -19,7 +20,7 @@ namespace mulova.comunity
 		private float dt;
 		private Action callback;
 		private Predicate<Rigidbody2D> threshold;
-		public static readonly Loggerx log = LogManager.GetLogger(typeof(PhyxObj));
+		public static readonly ILogger log = LogManager.GetLogger(typeof(PhyxObj));
 		
 		public Rigidbody2D GetRigidbody() {
 			if (body == null) {
