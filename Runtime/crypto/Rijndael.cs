@@ -14,7 +14,7 @@ using System.IO;
 namespace mulova.comunity {
 	public class Rijndael : IDisposable
 	{
-		public static readonly ILogger log = LogManager.GetLogger(typeof(Rijndael));
+		public static readonly ILog log = LogManager.GetLogger(typeof(Rijndael));
 		private UnicodeEncoding converter = new UnicodeEncoding();
 		private RijndaelManaged crypto;
 		private static readonly Rijndael instance = new Rijndael();
