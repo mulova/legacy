@@ -9,7 +9,7 @@ namespace mulova.comunity
 {
 	public class AES : IDisposable
 	{
-		public static readonly ILog log = LogManager.GetLogger(typeof(AES));
+		public static readonly ILog log = LogManager.GetLogger(nameof(AES));
 		public bool enabled = true;
 		private UnicodeEncoding converter = new UnicodeEncoding();
 		private static readonly AES instance = new AES();

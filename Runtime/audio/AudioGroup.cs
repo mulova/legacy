@@ -99,7 +99,7 @@ namespace mulova.audio
                     _players = new AudioPlayer[playerCount];
                     for (int i=0; i<playerCount; ++i)
                     {
-                        _players[i] = playerPrefab.InstantiateEx();
+                        _players[i] = Object.Instantiate(playerPrefab);
                         _players[i].gameObject.SetActive(true);
                     }
                 }

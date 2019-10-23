@@ -13,7 +13,7 @@ using System.Text;
 namespace mulova.comunity {
 	public class RSA : IDisposable
 	{
-		public static readonly ILog log = LogManager.GetLogger(typeof(RSA));
+		public static readonly ILog log = LogManager.GetLogger(nameof(RSA));
 		private UnicodeEncoding converter = new UnicodeEncoding();
 		private RSACryptoServiceProvider rsa;
 		private RSAParameters encKey;

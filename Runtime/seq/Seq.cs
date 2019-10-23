@@ -18,7 +18,7 @@ namespace mulova.comunity
         private bool skip;
         private int animLayer;
         private readonly ConcurrentTurn NO_SKIP = new ConcurrentTurn(new ActionTurn(null));
-        public static readonly ILog log = LogManager.GetLogger(typeof(Seq));
+        public static readonly ILog log = LogManager.GetLogger(nameof(Seq));
         private TimerControl timer;
         private bool errorTolerant;
 

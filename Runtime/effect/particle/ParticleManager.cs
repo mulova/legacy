@@ -11,6 +11,7 @@ using System.IO;
 using mulova.commons;
 using System.Collections.Generic.Ex;
 using UnityEngine.Ex;
+using Object = UnityEngine.Object;
 
 namespace mulova.effect
 {
@@ -66,7 +67,7 @@ namespace mulova.effect
 						GameObject poolGO = new GameObject(Path.GetFileNameWithoutExtension(p.Key));
 						poolGO.transform.SetParent(transform, false);
 						ParticlePool pool = poolGO.AddComponent<ParticlePool>();
-						GameObject rawPrefab = p.Value.InstantiateEx(poolGO.transform);
+						GameObject rawPrefab = Object.Instantiate(p.Value, poolGO.transform);
 						GameObject prefab = rawPrefab.CreateParent(rawPrefab.name);
 						pool.SetPrefab(prefab);
 						pool.SetMinInstanceCount(minInstanceCount);

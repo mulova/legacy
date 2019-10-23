@@ -8,7 +8,7 @@ using System.Ex;
 [RequireComponent(typeof(Animation))]
 public class IgnoreTimeScale : MonoBehaviour
 {
-    public static readonly ILog log = LogManager.GetLogger(typeof(Animation));
+    public static readonly ILog log = LogManager.GetLogger(nameof(Animation));
 	public bool ignorePause = true;
 	private Animation anim;
 

@@ -11,6 +11,7 @@ using mulova.comunity;
 using mulova.unicore;
 using UnityEngine;
 using UnityEngine.Ex;
+using Object = UnityEngine.Object;
 
 namespace mulova.effect
 {
@@ -87,7 +88,7 @@ namespace mulova.effect
 					if (Platform.isEditor) {
 						name += runningCount;
 					}
-					GameObject inst = prefab.InstantiateEx(transform);
+					GameObject inst = Object.Instantiate(prefab, transform);
 					e = inst.FindComponent<ParticleControl>();
 					e.gameObject.SetActive(false);
 				} else {
@@ -150,7 +151,7 @@ namespace mulova.effect
 		}
 
 		private ParticleControl CreateInstance() {
-			GameObject inst = prefab.InstantiateEx(transform);
+			GameObject inst = Object.Instantiate(prefab, transform);
 			if (Platform.isEditor) {
 				inst.name = prefab.name+runningCount;
 			}
@@ -186,7 +187,7 @@ namespace mulova.effect
 			this.minInstanceCount = minInstanceCount;
 			LoadParticle(p=> {
 				while (runningCount+queue.Count < minInstanceCount-1) {
-					queue.Enqueue(p.InstantiateEx());
+					queue.Enqueue(Object.Instantiate(p));
 				}
 				queue.Enqueue(p);
 			});

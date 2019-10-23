@@ -20,7 +20,7 @@ namespace mulova.comunity
 		private float dt;
 		private Action callback;
 		private Predicate<Rigidbody2D> threshold;
-		public static readonly ILog log = LogManager.GetLogger(typeof(PhyxObj));
+		public static readonly ILog log = LogManager.GetLogger(nameof(PhyxObj));
 		
 		public Rigidbody2D GetRigidbody() {
 			if (body == null) {

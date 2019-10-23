@@ -8,16 +8,16 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using mulova.commons;
-using ani;
 using System.Ex;
+using ani;
+using mulova.commons;
 
 
 namespace UnityEngine.Ex
 {
     public static class AnimationEx {
 	    private static WeakHashSet<AnimationClip> registeredClips = new WeakHashSet<AnimationClip>();
-        public static readonly mulova.commons.ILog log = LogManager.GetLogger(typeof(Animation));
+        public static readonly mulova.commons.ILog log = LogManager.GetLogger(nameof(Animation));
 
 	    public static void PlayIgnoreScale( this Animation animation, AnimationClip clip, Action onComplete = null)
 	    {

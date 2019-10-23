@@ -1,11 +1,11 @@
-﻿using UnityEngine;
-using System;
-using mulova.comunity;
-using mulova.commons;
+﻿using System;
 using System.Ex;
+using mulova.comunity;
+using UnityEngine;
 
-namespace ani {
-	public class TimeOutTurn : SeqTurn {
+namespace ani
+{
+    public class TimeOutTurn : SeqTurn {
 		private Action callback;
 		private float delay;
 		private Action beginAction;
