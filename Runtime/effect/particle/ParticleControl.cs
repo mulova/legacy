@@ -12,7 +12,7 @@ using System.Ex;
 
 namespace mulova.effect
 {
-	[ExecuteInEditMode]
+	[ExecuteAlways]
 	public class ParticleControl : LogBehaviour, IReleasable
 	{
 		internal int poolId { get; set; }
