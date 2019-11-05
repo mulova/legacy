@@ -207,12 +207,12 @@ namespace mulova.audio
 
         private void OnVoidEvent(object evt)
         {
-            Play(evt.ToText());
+            Play(evt.ToString());
         }
 
         private void OnFloatEvent(object evt, float val)
         {
-            PlayDelayed(evt.ToText(), 1, val);
+            PlayDelayed(evt.ToString(), 1, val);
         }
 
         private void OnBoolEvent(object evt, bool val)
@@ -237,7 +237,7 @@ namespace mulova.audio
                             OnVoidEvent(stack.Peek());
                         } else
                         {
-                            Stop(evt.ToText());
+                            Stop(evt.ToString());
                         }
                     } else
                     {

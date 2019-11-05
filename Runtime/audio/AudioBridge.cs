@@ -20,10 +20,10 @@ public class AudioBridge {
 		Messenger<object>.Broadcast(VOID_EVENT_ID, id);
 	}
 	public static void Play(object evt, float val) {
-		Messenger<object, float>.Broadcast(FLOAT_EVENT_ID, evt.ToText ().ToLower(), val);
+		Messenger<object, float>.Broadcast(FLOAT_EVENT_ID, evt.ToString ().ToLower(), val);
 	}
 	public static void Play(object evt, bool val) {
-		Messenger<object, bool>.Broadcast(BOOL_EVENT_ID, evt.ToText ().ToLower(), val);
+		Messenger<object, bool>.Broadcast(BOOL_EVENT_ID, evt.ToString ().ToLower(), val);
 	}
 	public static void Play(object control, string groupName) {
 		Messenger<object, object>.Broadcast(CONTROL_EVENT_ID, control, groupName);
