@@ -198,7 +198,7 @@ namespace ani
                         EditorGUILayout.BeginHorizontal();
                         EditorGUILayout.LabelField("==>");
                         Color oldColor = GUI.backgroundColor;
-                        if (ReflectionUtil.GetType(targetCurveInfo[t].type) == null) {
+                        if (targetCurveInfo[t].type.GetType() == null) {
                             GUI.backgroundColor = Color.red;
                         }
                         targetCurveInfo[t].type = EditorGUILayout.TextField (targetCurveInfo[t].type);
@@ -286,7 +286,7 @@ namespace ani
             }
             
             public void ApplyProperty(AnimationClipCurveData c) {
-                c.type = ReflectionUtil.GetType(type);
+                c.type = type.GetType();
                 int dot = c.propertyName.LastIndexOf('.');
                 if (dot >= 0) {
                     c.propertyName = propertyName+c.propertyName.Substring(dot);

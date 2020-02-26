@@ -1,10 +1,10 @@
 ﻿using System.Text.Ex;
-using mulova.commons;
 using mulova.unicore;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Ex;
 using Object = UnityEngine.Object;
+using System.Ex;
 
 namespace ani
 {
@@ -22,7 +22,7 @@ namespace ani
 			Animation anim = c.GetComponent<Animation>();
 			AnimationClipListingAttribute attr = attribute as AnimationClipListingAttribute;
 			if (!attr.varName.IsEmpty()) {
-				Object o = ReflectionUtil.GetFieldValue<Object>(c, attr.varName);
+				Object o = c.GetFieldValue<Object>(attr.varName);
 				if (o != null) {
 					if (o is Animation) {
 						anim = o as Animation;

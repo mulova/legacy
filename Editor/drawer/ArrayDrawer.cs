@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using mulova.commons;
 using mulova.unicore;
 using Object = UnityEngine.Object;
+using System.Ex;
 
 namespace mulova.comunity
 {
@@ -15,7 +15,7 @@ namespace mulova.comunity
         }
 
         public ArrayDrawer(object target, string fieldName, IItemDrawer<T> itemDrawer)
-            : base(new List<T>(ReflectionUtil.GetFieldValue<T[]>(target, fieldName)), itemDrawer)
+            : base(new List<T>(target.GetFieldValue<T[]>(fieldName)), itemDrawer)
         {
             this.target = target;
             this.fieldName = fieldName;
@@ -49,7 +49,7 @@ namespace mulova.comunity
 
         private void Refresh()
         {
-            ReflectionUtil.SetFieldValue(target, fieldName, list.ToArray());
+            target.SetFieldValue(fieldName, list.ToArray());
             SetDirty();
         }
 
