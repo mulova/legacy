@@ -33,8 +33,8 @@ namespace mulova.comunity
                 EditorUI.BeginContents();
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.BeginVertical();
-                EditorGUIUtil.Popup("From", ref srcState, EnumUtil.Values<InputState>());
-                EditorGUIUtil.Popup("To", ref dstState, EnumUtil.Values<InputState>());
+                EditorGUIEx.Popup("From", ref srcState, EnumUtil.Values<InputState>());
+                EditorGUIEx.Popup("To", ref dstState, EnumUtil.Values<InputState>());
                 EditorGUILayout.EndVertical();
                 if (GUILayout.Button("Add", GUILayout.Height(30))) {
                     InputAxisMapData srcData = sys.inputStateData[(int)srcState];

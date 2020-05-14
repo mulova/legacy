@@ -118,7 +118,7 @@ namespace ani
             
             scrollPos = EditorGUILayout.BeginScrollView (scrollPos);
             if (!clips.IsEmpty()) {
-                if (EditorGUILayoutUtil.Popup("Clip", ref clip, clips)) {
+                if (EditorGUILayoutEx.Popup("Clip", ref clip, clips)) {
                     InitClip(clip);
                 }
 

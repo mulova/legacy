@@ -105,7 +105,7 @@ namespace mulova.audio
         public void DrawManageTableGUI()
         {
             TextAsset asset = null;
-            if (EditorGUILayoutUtil.ObjectField("Add Audio Table csv", ref asset, false))
+            if (EditorGUILayoutEx.ObjectField("Add Audio Table csv", ref asset, false))
             {
                 string path = EditorAssetUtil.GetAssetRelativePath(asset);
                 AudioDataTable table = new AudioDataTable(path);
@@ -143,7 +143,7 @@ namespace mulova.audio
                     changed = true;
                 }
             }
-            if (EditorGUILayoutUtil.PopupNullable(showLabel? "Table" : null, ref table, tables, ObjToString.DefaultToString))
+            if (EditorGUILayoutEx.PopupNullable(showLabel? "Table" : null, ref table, tables, ObjToString.DefaultToString))
             {
                 if (table != null && table.keys != null)
                 {
@@ -154,7 +154,7 @@ namespace mulova.audio
                 }
                 changed = true;
             }
-            if (EditorGUILayoutUtil.PopupNullable(showLabel? "Clip" : null, ref clip, clips))
+            if (EditorGUILayoutEx.PopupNullable(showLabel? "Clip" : null, ref clip, clips))
             {
                 changed = true;
             }

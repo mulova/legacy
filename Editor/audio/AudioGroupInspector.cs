@@ -43,7 +43,7 @@ namespace mulova.audio
             if (Application.isPlaying)
             {
                 EditorGUILayout.BeginHorizontal();
-                EditorGUILayoutUtil.Popup<string>(ref curClip, new List<string>(group.clips));
+                EditorGUILayoutEx.Popup<string>(ref curClip, new List<string>(group.clips));
                 if (GUILayout.Button("Play"))
                 {
                     group.Play(curClip);

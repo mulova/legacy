@@ -23,7 +23,7 @@ namespace uguiex
 		public override void OnInspectorGUI () 
 		{
 			inspector.OnInspectorGUI();
-			if (EditorGUIUtil.ObjectField<Object>("Dir", ref dir, false))
+			if (EditorGUIEx.ObjectField<Object>("Dir", ref dir, false))
 			{
 				if (dir == null) 
 				{

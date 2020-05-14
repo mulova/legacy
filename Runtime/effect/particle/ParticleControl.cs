@@ -47,7 +47,7 @@ namespace mulova.effect
 			{
 				if (_renderers == null)
 				{
-					_renderers = particles.Convert(p => p.GetComponent<ParticleSystemRenderer>());
+					_renderers = particles.ConvertAll(p => p.GetComponent<ParticleSystemRenderer>());
 				}
 				return _renderers;
 			}

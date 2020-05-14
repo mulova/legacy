@@ -28,7 +28,7 @@ namespace mulova.audio
 			if (selectedGroup == null) {
 				EditorGUILayout.HelpBox("No AudioGroup is found", MessageType.Warning);
 			} else {
-				if (EditorGUILayoutUtil.Popup("Audio Group", ref selectedGroup, groups, GUILayout.ExpandWidth(false))) {
+				if (EditorGUILayoutEx.Popup("Audio Group", ref selectedGroup, groups, GUILayout.ExpandWidth(false))) {
 					SetGroup(selectedGroup);
 				}
 			}
@@ -38,7 +38,7 @@ namespace mulova.audio
 			if (selectedGroup == null) {
 				return false;
 			} else {
-				return EditorGUILayoutUtil.Popup<string>(title, ref key, keys);
+				return EditorGUILayoutEx.Popup<string>(title, ref key, keys);
 			}
 		}
 	}
